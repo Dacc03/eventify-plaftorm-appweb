@@ -32,5 +32,9 @@ public static class ModelBuilderExtensions
             a.Property(a=>a.PostalCode).HasColumnName("AddressPostalCode");
             a.Property(a=>a.Country).HasColumnName("AddressCountry");
         });
+        builder.Entity<Profile>()
+            .Property(p => p.Role)
+            .HasConversion<int>()
+            .IsRequired();
     }
 }

@@ -10,7 +10,10 @@ public interface IProfilesContextFacade
         string number,
         string city,
         string postalCode,
-        string country);
+        string country,
+        string role);
     
     Task<int> FetchProfileIdByEmail(string email);
+
+    Task<bool> ProfileExists(int profileId);
 }

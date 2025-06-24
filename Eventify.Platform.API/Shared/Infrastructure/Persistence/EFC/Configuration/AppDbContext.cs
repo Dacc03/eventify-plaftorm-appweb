@@ -1,5 +1,6 @@
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Eventify.Platform.API.Profiles.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using Eventify.Platform.API.Profiles.Albums.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using Eventify.Platform.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         
         //Apply configuration for the Profiles bounded context
         builder.ApplyProfilesConfiguration();
+        builder.ApplyAlbumsConfiguration();
         
         // Use snake case naming convention for the database
         builder.UseSnakeCaseNamingConvention();
