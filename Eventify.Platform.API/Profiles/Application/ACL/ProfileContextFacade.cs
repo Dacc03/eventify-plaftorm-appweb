@@ -41,4 +41,11 @@ public class ProfilesContextFacade(
         var profile = await profileQueryService.Handle(query);
         return profile != null;
     }
+
+    public async Task<bool> ProfileExistsWithRole(int profileId, TypeProfile role)
+    {
+        var query = new GetProfileByIdQuery(profileId);
+        var profile = await profileQueryService.Handle(query);
+        return profile is not null && profile.Role == role;
+    }
 }

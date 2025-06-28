@@ -1,4 +1,6 @@
-﻿namespace Eventify.Platform.API.Profiles.Interfaces.ACL;
+using Eventify.Platform.API.Profiles.Domain.Model.ValueObjects;
+
+namespace Eventify.Platform.API.Profiles.Interfaces.ACL;
 
 public interface IProfilesContextFacade
 {
@@ -16,4 +18,6 @@ public interface IProfilesContextFacade
     Task<int> FetchProfileIdByEmail(string email);
 
     Task<bool> ProfileExists(int profileId);
+
+    Task<bool> ProfileExistsWithRole(int profileId, TypeProfile role);
 }
