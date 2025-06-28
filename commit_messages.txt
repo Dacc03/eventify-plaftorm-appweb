@@ -1,0 +1,28 @@
+feat(albums): add AlbumCommandService
+feat(albums): add AlbumQueryService
+feat(albums): add Album aggregate
+feat(albums): add CreateAlbumCommand
+feat(albums): add GetAlbumByIdQuery
+feat(albums): add GetAllAlbumsQuery
+feat(albums): add PhotoUrl value object
+feat(albums): add album repository interface
+feat(albums): add album command service interface
+feat(albums): add album query service interface
+feat(albums): add EF Core configuration
+feat(albums): add album repository implementation
+feat(albums): add albums REST controller
+feat(albums): add album resource
+feat(albums): add create album resource
+feat(albums): add album resource assembler
+feat(albums): add create album command assembler
+feat(profiles): enable role validation in context facade
+feat(profiles): add role to profile aggregate
+feat(profiles): add role parameter in create profile command
+feat(profiles): map profile role in EF configuration
+feat(profiles): extend ACL interface with role checking
+feat(profiles): include role in create profile resource
+feat(profiles): include role in profile resource
+feat(profiles): parse role in create profile assembler
+feat(profiles): include role in profile resource assembler
+feat(api): configure DI for album services
+feat(db): register albums configuration in DbContext
