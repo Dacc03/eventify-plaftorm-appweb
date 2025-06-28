@@ -69,9 +69,12 @@ builder.Services.AddScoped<IProfileQueryService, ProfileQueryService>();
 builder.Services.AddScoped<IProfilesContextFacade, ProfilesContextFacade>();
 
 // Albums Bounded Context
-builder.Services.AddScoped<IAlbumRepository, AlbumRepository>();
-builder.Services.AddScoped<IAlbumCommandService, AlbumCommandService>();
-builder.Services.AddScoped<IAlbumQueryService, AlbumQueryService>();
+builder.Services.AddScoped<Eventify.Platform.API.Profiles.Albums.Domain.Repositories.IAlbumRepository,
+    Eventify.Platform.API.Profiles.Albums.Infrastructure.Persistence.EFC.Repositories.AlbumRepository>();
+builder.Services.AddScoped<Eventify.Platform.API.Profiles.Albums.Domain.Services.IAlbumCommandService,
+    Eventify.Platform.API.Profiles.Albums.Application.Internal.CommandServices.AlbumCommandService>();
+builder.Services.AddScoped<Eventify.Platform.API.Profiles.Albums.Domain.Services.IAlbumQueryService,
+    Eventify.Platform.API.Profiles.Albums.Application.Internal.QueryServices.AlbumQueryService>();
 
 
 var app = builder.Build();
